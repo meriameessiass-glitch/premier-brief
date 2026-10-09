@@ -1,0 +1,296 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+p {
+    text-align: center;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+
+#coleurdiff {
+    color: rgb(81, 82, 82);
+    text-decoration: underline;
+}
+
+
+#text {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+.dim {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    max-width: 100%;
+}
+
+
+h1 {
+    text-align: center;
+    color: #0F1B2D;
+    overflow-wrap: break-word;
+}
+
+
+#background {
+    background-image: url("https://www.joinkumo.com/wp-content/uploads/2024/08/Kumo-2024-08-Content-2-1-min-scaled.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    padding: 60px 20px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: auto;
+}
+
+
+.gras {
+    color: #0F1B2D;
+}
+
+/* Cercles */
+#text > .cercle {
+    flex: 1 1 150px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+
+#text .cercle .nor img.petite {
+    width: 4px;
+    height: 4px;
+    object-fit: contain;
+}
+
+
+
+#text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+.bordur {
+    border: 2px solid #C5A46D;
+    border-radius: 1px;
+    padding: 1px;
+    background-color: rgba(255, 255, 255, 0.92);
+    flex: 1 1   00px;
+    min-width: 0;
+    max-width: 300px;
+    display:flex;
+    gap: 6px;
+    min-width: 180px;
+
+}
+
+.bordur::marker {
+    border-color: #285943;
+    box-shadow: 0 6px 16px rgba(15, 27, 45, 0.22);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    #background {
+        padding: 50px 25px;
+        background-attachment: scroll;
+    }
+
+    #text {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    #text > .cercle {
+        flex: 1 1 40%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    #background {
+        padding: 30px 15px;
+        background-position: center;
+    }
+
+    #text {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    #text > .cercle {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .dim {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    #background {
+        padding: 20px 10px;
+    }
+
+    .titre {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+
+#aliner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#aliner label {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+#aliner select {
+    width: 200px;
+    max-width: 100%;
+    padding: 8px;
+    border: 2px solid #C5A46D;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    #aliner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #aliner select {
+        width: 100%;
+    }
+}
+
+
+input,
+select,
+textarea {
+    box-sizing: border-box;
+    padding: 1px 12px;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #0F1B2D;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    max-width: 100%;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #FF642D;
+    box-shadow: 0 0 0 3px rgba(255, 100, 45, 0.2);
+}
+
+
+input[type="submit"],
+button {
+    background-color: #FF642D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #E84F1D;
+    transform: translateY(-2px);
+}
+
+
+@media screen and (max-width: 600px) {
+    input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+    select,
+    textarea {
+        width: 100%;
+    }
+}
+.formulaire{
+    display:flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}

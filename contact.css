@@ -30,6 +30,7 @@ h1{
     background-size: cover;
     background-attachment:fixed ;
     
+    
 }
 .gras{
     color: #0F1B2D;
@@ -52,8 +53,8 @@ p{
     height: 4px;
 }
 .bordur{
-    border-style: ridge;
-    border-color: ;
+    border-style:;
+    border-color:rgb(6, 76, 53);
 }
 
 
